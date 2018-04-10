@@ -35,6 +35,7 @@ Cette route permet d'afficher tous les biens de la base de données avec une com
 
 ```
 curl -H "Content-Type: application/json" -X GET  http://localhost:5000/bien
+
 ``
 
 
@@ -44,7 +45,8 @@ Cette route permet d'afficher tous les biens d'une ville entrée en paramètre a
 
 ```
 curl -H "Content-Type: application/json" -X GET  http://localhost:5000/bien/Paris
-``
+
+```
 
 ### @application.route('/bien/update/<int:bienId>/<string:attribute>', methods=['PATCH'])
 
@@ -52,6 +54,7 @@ Cette route permet de mettre à jour les caractéristiques d'un bien avec une co
 
 ```
 curl -H "Content-Type: application/json" -X PATCH -d '{"nom":"Henri"}'  http://localhost:5000/bien/update/2/nom
+
 ```
 
 ### @application.route('/bien/delete/<int:bienId>', methods=['DELETE'])
@@ -61,6 +64,7 @@ Cette route permet de supprimer un bien de la base de données avec une commande
 ```
 curl -H "Content-Type: application/json" -X DELETE http://localhost:5000/bien/delete/4
 
+``
 
 ### @application.route('/user/create', methods=['POST'])
 
@@ -68,6 +72,7 @@ Cette route permet de créer un utilisateur avec une commande de ce type (mettre
 
 ```
 curl -H "Content-Type: application/json" -X POST -d '{"nom":"Fattal", "prenom":"Eric", "date_naissance":"1995-11-13"}' http://localhost:5000/user/create
+
 ```
 
 ### @application.route('/user/update/<int:userId>/<string:attribute>', methods=['PATCH'])
@@ -76,4 +81,5 @@ Cette route permet de mettre à jour les caractéristiques d'un utilisateur avec
 
 ```
 curl -H "Content-Type: application/json" -X PATCH -d '{"prenom":"Eric Antoine"}' http://localhost:5000/user/update/1/prenom
+
 ``
