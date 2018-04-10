@@ -36,7 +36,7 @@ Cette route permet d'afficher tous les biens de la base de données avec une com
 ```
 curl -H "Content-Type: application/json" -X GET  http://localhost:5000/bien
 
-``
+``` 
 
 
 ### @application.route('/bien/<string:strVille>', methods=['GET'])
@@ -64,7 +64,7 @@ Cette route permet de supprimer un bien de la base de données avec une commande
 ```
 curl -H "Content-Type: application/json" -X DELETE http://localhost:5000/bien/delete/4
 
-``
+```
 
 ### @application.route('/user/create', methods=['POST'])
 
@@ -82,4 +82,4 @@ Cette route permet de mettre à jour les caractéristiques d'un utilisateur avec
 ```
 curl -H "Content-Type: application/json" -X PATCH -d '{"prenom":"Eric Antoine"}' http://localhost:5000/user/update/1/prenom
 
-``
+```
